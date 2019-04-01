@@ -1,0 +1,23 @@
+ion-card{
+    width: 100%;
+}
+ion-content{
+    --background:navy;
+}
+input[type="text"]{
+    width:70%;
+    margin-left:38px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    }
+
+    ion-button{
+        margin-left:20px;
+        width: 80%;
+    }
+    ion-card-header{
+        color:white;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+    }

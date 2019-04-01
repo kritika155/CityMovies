@@ -1,0 +1,36 @@
+
+
+<ion-content>
+<ion-card>
+    
+  <ion-card-header>
+     LOGIN 
+  </ion-card-header>
+  <ion-card-content>
+<ion-list no-lines>
+<ion-item>
+
+<ion-label floating><ion-icon name="person"></ion-icon></ion-label>
+<ion-input type="text" placeholder="Email" [(ngModel)]="customer.email"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-icon name="key"></ion-icon>
+<ion-input type="password" placeholder="Password" [(ngModel)]="customer.password"></ion-input>
+</ion-item>
+<ion-item><p><a routerLink="/forget">Forgot Your Password?</a>&nbsp;<a routerLink="/register">New User?</a>
+</p></ion-item>
+
+<!-- <button ion-button color="primary">Login</button> -->
+
+<ion-button class="face" color="primary" expand="block" (click)="doLogin(customer)">LOGIN</ion-button>
+</ion-list>
+
+  </ion-card-content>
+  <p>OR</p><br><br>
+<ion-button class="face" color="primary" expand="block"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+<ion-button class="face" color="primary"expand="block"><ion-icon name="logo-googleplus"></ion-icon></ion-button>
+
+</ion-card>
+
+
+</ion-content>

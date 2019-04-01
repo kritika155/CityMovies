@@ -1,0 +1,16 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>Register</ion-card-header>
+    <!-- <input type="text" placeholder="id" [(ngModel)]="customer.id" readonly> -->
+    <input type="text" placeholder="name" [(ngModel)]="customer.name"><br>
+    <input type="password" placeholder="password" [(ngModel)]="customer.password"><br>
+    <input type="text" placeholder="address" [(ngModel)]="customer.address"><br>
+    <input type="text" placeholder="email" [(ngModel)]="customer.email"><br>
+    <input type="text" placeholder="phone" [(ngModel)]="customer.phone"><br>
+<input type="button" value="Register" (click)="addCustomer(customer)">
+  </ion-card>
+  <!-- <div *ngFor='let customer of list'>
+    {{customer.name}}|{{customer.password}}
+  </div> -->
+
+</ion-content>

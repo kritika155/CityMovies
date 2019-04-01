@@ -1,1 +1,23 @@
 
+ion-content{
+    --background: navy;
+    --background-size: cover;
+    --background-position: center;
+    --background-repeat: no-repeat;
+}
+
+// ion-img{
+// margin-top: 200px;
+// }
+ion-toolbar{
+    --background:red;  
+} 
+ion-card{
+    --background:white;
+}
+.a{
+    width:30%;
+}
+.image h1{
+    color:white;
+}
