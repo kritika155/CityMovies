@@ -17,9 +17,14 @@ import {BookingComponent} from './booking/booking.component';
 import {AddmovieComponent} from './addmovie/Addmovie.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {PaymentdoneComponent} from './paymentdone/paymentdone.component';
+import {TheaterComponent} from './theater/theater.component';
+import {ProfileComponent} from './profile/profile.component';
+import {AddOnsComponent} from './add-ons/add-ons.component';
+
 
 @NgModule({
-  declarations: [AppComponent,AddmovieComponent,LoginComponent,MoviesComponent,RegisterComponent,ForgetComponent,BookingComponent,PaymentComponent,OfferComponent],
+  declarations: [AppComponent,AddOnsComponent,PaymentdoneComponent,ProfileComponent,TheaterComponent,AddmovieComponent,LoginComponent,MoviesComponent,RegisterComponent,ForgetComponent,BookingComponent,PaymentComponent,OfferComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,FormsModule],
   providers: [

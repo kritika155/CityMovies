@@ -1,4 +1,75 @@
-<p>
- Pay:Rs.{{priceBooking}}
+
+<!-- <ion-label floating><ion-icon name="person"></ion-icon></ion-label>
+<ion-input type="text" placeholder="Email" [(ngModel)]="payment.email"></ion-input>
+<ion-label floating><ion-icon name="person"></ion-icon></ion-label>
+<ion-input type="text" placeholder="Name on the card" [(ngModel)]="payment.name"></ion-input>
+<ion-label floating><ion-icon name="person"></ion-icon></ion-label>
+<ion-input type="number" placeholder="Card number" [(ngModel)]="payment.cardNumber"></ion-input>
+<ion-label floating><ion-icon name="person">Expiry Date</ion-icon></ion-label>
+<ion-input type="month" placeholder="month" [(ngModel)]="payment.expirydate"></ion-input>
+<ion-input type="year" placeholder="year" [(ngModel)]="payment.expirydate"></ion-input>
+
+<ion-label floating><ion-icon name="lock"></ion-icon></ion-label>
+<ion-input type="number" placeholder="Cvv" [(ngModel)]="payment.cvv"></ion-input>
+<ion-label floating><ion-icon name="address"></ion-icon></ion-label>
+<ion-input type="number" placeholder="Postal Code" [(ngModel)]="payment.email"></ion-input>
+<ion-label> Pay:Rs.{{priceBooking}}</ion-label> -->
  <!-- {{priceBook.price}} -->
-</p>
+
+ <div class="creditCardForm">
+    <div class="heading">
+        <h1>Confirm Booking</h1>
+    </div>
+    <div class="payment">
+        <form>
+            <div class="form-group owner">
+                <label for="owner">Owner</label><br>
+                <input type="text" class="form-control" id="owner">
+            </div>
+            <div class="form-group CVV">
+                <label for="cvv">CVV</label><br>
+                <input type="text" class="form-control" id="cvv">
+            </div>
+            <div class="form-group" id="card-number-field">
+                <label for="cardNumber">Card Number</label><br>
+                <input type="text" class="form-control" id="cardNumber">
+            </div>
+            <div class="form-group" id="expiration-date">
+                <label>Expiration Date</label><br>
+                <select>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select>
+                    <option value="16"> 2016</option>
+                    <option value="17"> 2017</option>
+                    <option value="18"> 2018</option>
+                    <option value="19"> 2019</option>
+                    <option value="20"> 2020</option>
+                    <option value="21"> 2021</option>
+                </select>
+            </div>
+            <div class="form-group" id="credit_cards">
+                <img src="assets/visa.png" id="visa">
+                <img src="assets/mastercard.jpg" id="mastercard">
+                <img src="assets/amex.png" id="amex">
+            </div>
+            <div class="form-group" id="pay-now">
+                    <!-- <ion-label> Pay:Rs.{{priceBooking}}</ion-label>  -->
+
+                <button type="submit" class="btn btn-default" id="confirm-purchase"> Pay:Rs.{{priceBooking}}</button>
+            </div>
+
+        </form>
+    </div>
+</div>

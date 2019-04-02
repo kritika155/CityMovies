@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./payment.component.scss'],
 })
 export class PaymentComponent implements OnInit {
+  payment:any={};
 priceBooking =JSON.parse(localStorage.getItem('price'));
 priceBook:{price:''};
   constructor(private route: ActivatedRoute,private router :Router, private customerService:CustomerService) {
