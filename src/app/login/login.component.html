@@ -17,8 +17,7 @@
   <ion-icon name="key"></ion-icon>
 <ion-input type="password" placeholder="Password" [(ngModel)]="customer.password"></ion-input>
 </ion-item>
-<ion-item><p><a routerLink="/forget">Forgot Your Password?</a>&nbsp;<a routerLink="/register">New User?</a>
-</p></ion-item>
+
 
 <!-- <button ion-button color="primary">Login</button> -->
 
@@ -27,9 +26,11 @@
 
   </ion-card-content>
   <p>OR</p><br><br>
-<ion-button class="face" color="primary" expand="block"><ion-icon name="logo-facebook"></ion-icon></ion-button>
-<ion-button class="face" color="primary"expand="block"><ion-icon name="logo-googleplus"></ion-icon></ion-button>
-
+<ion-button class="face" color="primary" expand="block"  href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+<ion-button class="face" color="primary"expand="block"  href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Ftab%3Dwm&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession&TL=AHnYQLx_iFJ5bl-KdI6sN0sNg7Qg8TxZ16B7O61awn-HPLamDHPTI7gCG3s9rCKUXQeLWpYfWC1MRKtS3dH5NsBB7gPnUElcw1cbDP5SxzBCnWc_A70irLQ"><ion-icon name="logo-googleplus"></ion-icon></ion-button>
+<a id="forgot" routerLink="/forget">Forgot Your Password?</a><br>
+  <a  id="new"routerLink="/register">New User?</a>
+ 
 </ion-card>
 
 
