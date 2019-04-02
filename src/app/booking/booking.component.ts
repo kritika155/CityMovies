@@ -27,8 +27,11 @@ private sub: any;
  {
   var books:any = {customer_id:this.customerId.id,tickets:this.booking.tickets,movie_id:this.movie.id,movie_name:this.movie.name,movie_time:this.booking.movie_time,theatre:'Tulsi',screen:'Screen 2',city:'Bangalore',movie_date:this.booking.movie_date,date:this.booking.date,amount:this.booking.amount,ticket_price:this.booking.ticket_price};
    var price:any = books.tickets*books.ticket_price*books.amount;
+   localStorage.setItem('price', JSON.stringify(price));
+        var priceL = JSON.parse(localStorage.getItem('price'));
+        console.log(priceL);
    console.log(books);
-   console.log(price);
+  //  console.log(price);
    this.customerService.addRemoteBooking(books).subscribe(()=>{ this.router.navigate(['payment/'+price]);});
 
  } 

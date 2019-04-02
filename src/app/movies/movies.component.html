@@ -7,8 +7,11 @@
       
      
             <div *ngFor="let movie of list"> 
-          <ion-card>  <ion-card-header>{{movie.name}}</ion-card-header>              
-          <span class="fl"><input type="button" name="edit" value="book" (click)="onSelect(movie)"></span>
+          <ion-card> 
+             <ion-card-header>{{movie.name}}</ion-card-header>              
+          <span class="fl">
+            <ion-button  name="edit"  (click)="onSelect(movie)">book</ion-button>
+          </span>
             <br>
                <img src={{movie.image_url}}>
           

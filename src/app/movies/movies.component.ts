@@ -25,9 +25,9 @@ onSelect(movie)
 {  
 //   this.customerService.getRemoteMovieById(this.movie.id).subscribe((movie)=>{this.movie = movie;});
 
-//   localStorage.setItem('movies', JSON.stringify(this.movie));
-// this.movies = JSON.parse(localStorage.getItem('movies'));
-// console.log(this.movies);
+  localStorage.setItem('movies', JSON.stringify(movie));
+var movies = JSON.parse(localStorage.getItem('movies'));
+console.log(movies);
   this.router.navigate(['./booking/'+movie.id]); 
 }
 
