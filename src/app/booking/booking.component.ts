@@ -26,7 +26,8 @@ private sub: any;
  addBookings()
  {
   var books:any = {customer_id:this.customerId.id,tickets:this.booking.tickets,movie_id:this.movie.id,movie_name:this.movie.name,movie_time:this.booking.movie_time,theatre:'Tulsi',screen:'Screen 2',city:'Bangalore',movie_date:this.booking.movie_date,date:this.booking.date,amount:this.booking.amount,ticket_price:this.booking.ticket_price};
-   var price:any = books.tickets*books.ticket_price*books.amount;
+   this.booking.ticket_price=this.booking.tickets*this.booking.amount;
+   var price:any=this.booking.ticket_price;
    localStorage.setItem('price', JSON.stringify(price));
         var priceL = JSON.parse(localStorage.getItem('price'));
         console.log(priceL);
@@ -35,6 +36,12 @@ private sub: any;
    this.customerService.addRemoteBooking(books).subscribe(()=>{ this.router.navigate(['payment/'+price]);});
 
  } 
+ show(booking){
+  var bookit:any = {customer_id:this.customerId.id,tickets:this.booking.tickets,movie_id:this.movie.id,movie_name:this.movie.name,movie_time:this.booking.movie_time,theatre:'Tulsi',screen:'Screen 2',city:'Bangalore',movie_date:this.booking.movie_date,date:this.booking.date,amount:this.booking.amount,ticket_price:this.booking.ticket_price};
+  this.booking.ticket_price=this.booking.tickets*this.booking.amount;
+
+   return this.booking.ticket_price;
+ }
   ngOnInit() {
 
     this.movie={name:"",year:"",image_url:"",production_house:"",rating:"",type:"",language:"",date:""};

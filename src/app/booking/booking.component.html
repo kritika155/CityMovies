@@ -20,17 +20,27 @@
 <ion-card>
   <ion-card-header>Booking Information</ion-card-header>
       <!-- <input type="number" placeholder="customer id" [(ngModel)]="customer.id"><br> -->
-<ion-item><ion-input type="number" placeholder="tickets" [(ngModel)]="booking.tickets"></ion-input></ion-item> <br>
-<ion-item><ion-input type="number" placeholder="movie id" [(ngModel)]="movie.id"></ion-input></ion-item><br>
-<ion-item><ion-input type="text" placeholder="movie name" [(ngModel)]="movie.name"></ion-input></ion-item><br>
+<ion-item>
+  <ion-label>Tickets</ion-label>
+  <ion-input type="number" placeholder="tickets" [(ngModel)]="booking.tickets"></ion-input></ion-item> <br>
+<ion-item>
+    <ion-label>Movie Id</ion-label>
+    <ion-input type="number" placeholder="movie id" [(ngModel)]="movie.id" readonly></ion-input></ion-item><br>
+<ion-item>
+   
+    <ion-input type="text" placeholder="movie name" [(ngModel)]="movie.name" readonly></ion-input></ion-item><br>
 <ion-item><ion-input type="text" placeholder="movie time" [(ngModel)]="booking.movie_time"></ion-input></ion-item><br>
 <ion-item><ion-input type="text" placeholder="theater" [(ngModel)]="booking.theatre"></ion-input></ion-item><br>
 <ion-item><ion-input type="text" placeholder="screen" [(ngModel)]="booking.screen"></ion-input></ion-item><br>
 <ion-item><ion-input type="text" placeholder="city" [(ngModel)]="booking.city"></ion-input></ion-item><br>
 <ion-item><ion-input type="date" placeholder="movie date" [(ngModel)]="booking.movie_date"></ion-input></ion-item><br>
 <ion-item><ion-input type="date" placeholder="date" [(ngModel)]="booking.date"></ion-input></ion-item><br>
-<ion-item><ion-input type="number" placeholder="ticket price" [(ngModel)]="booking.ticket_price"></ion-input></ion-item><br>
-<ion-item><ion-input type="number" placeholder="amount" [(ngModel)]="booking.amount"></ion-input></ion-item><br>
+<ion-item><ion-label>Ticket Price:</ion-label>
+  <ion-input type="number" placeholder="amount" [(ngModel)]="booking.amount"></ion-input></ion-item><br>
+<ion-item><ion-label>Total Amount:</ion-label>
+  <ion-input type="text" [(ngModel)]="booking.ticket_price"></ion-input></ion-item><br>
+<ion-button color="primary" (click)="show(booking)"  name="booking">Confirm</ion-button>
+
 </ion-card>
 <ion-button color="primary" (click)="addBookings(booking)"  name="booking">Book</ion-button>
 
