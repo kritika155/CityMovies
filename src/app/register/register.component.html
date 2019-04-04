@@ -1,16 +1,56 @@
-<ion-content>
-  <ion-card>
-    <ion-card-header>Register</ion-card-header>
+<ion-content padding>
+   
+  <form >
+    <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center> <ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+            (click)="move()"></ion-icon>
+            <h3 class="b">Register </h3>
+          </div>
+          <div padding>
+            <ion-card>
+           
+    <!-- <ion-card-header>Register</ion-card-header> -->
     <!-- <input type="text" placeholder="id" [(ngModel)]="customer.id" readonly> -->
-    <input type="text" placeholder="name" [(ngModel)]="customer.name"><br>
-    <input type="password" placeholder="password" [(ngModel)]="customer.password"><br>
-    <input type="text" placeholder="address" [(ngModel)]="customer.address"><br>
-    <input type="text" placeholder="email" [(ngModel)]="customer.email"><br>
-    <input type="text" placeholder="phone" [(ngModel)]="customer.phone"><br>
-<input type="button" value="Register" (click)="addCustomer(customer)">
+    <ion-item><ion-input name="username"  type="text" placeholder="name" [(ngModel)]="customer.name"><ion-icon name="person"></ion-icon>
+    </ion-input></ion-item><br>
+
+    <ion-item><ion-input name="password" type="password"  placeholder="Password" [(ngModel)]="customer.password"><ion-icon name="key">
+
+    </ion-icon></ion-input>
+      </ion-item><br>
+    <ion-item><ion-input type="text" placeholder="address" [(ngModel)]="customer.address"><ion-icon name="home"></ion-icon>
+    </ion-input></ion-item><br>
+    <ion-item><ion-input name="email" type="email" placeholder="Email"[(ngModel)]="customer.email" ><ion-icon name="mail"></ion-icon></ion-input>
+    </ion-item><br>
+    <ion-item><ion-input type="text" placeholder="phone" [(ngModel)]="customer.phone"><ion-icon name="phone-portrait"></ion-icon></ion-input></ion-item><br>
+<!-- <input type="button" value="Register" (click)="addCustomer(customer)"> -->
   </ion-card>
   <!-- <div *ngFor='let customer of list'>
     {{customer.name}}|{{customer.password}}
   </div> -->
+</div>
+<div padding>
+  <ion-button size="large" type="button" expand="block" (click)="addCustomer(customer)" >Register</ion-button>
+</div>
+</ion-col>
+</ion-row>
 
+<!-- <div text-align="center">
+       Or
+</div> -->
+
+<!-- <ion-img class="one" src="/assets/movie1.jpg"></ion-img> -->
+<!-- <div class="five">
+<ion-button color="tertiary" size="large"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+<ion-button color="secondary" size="large"><ion-icon name="logo-twitter"></ion-icon></ion-button>
+</div> -->
+
+
+
+
+
+</ion-grid>
+</form>
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import CustomerService   from '../customer.service';
 import { Router, NavigationEnd  } from '@angular/router';
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
@@ -11,7 +12,7 @@ export class MoviesComponent implements OnInit {
 
 movies:any={};
 list=[];
-  constructor(private customerService: CustomerService,private router :Router) {
+  constructor(private customerService: CustomerService,private router:Router,private _location: Location) {
 
    }
 
@@ -21,14 +22,17 @@ list=[];
 
   
 }
+move(){
+  this._location.back();
+}
 onSelect(movie)
 {  
 //   this.customerService.getRemoteMovieById(this.movie.id).subscribe((movie)=>{this.movie = movie;});
-
+if(localStorage.getItem('users')!='null'){
   localStorage.setItem('movies', JSON.stringify(movie));
 var movies = JSON.parse(localStorage.getItem('movies'));
 console.log(movies);
-  this.router.navigate(['./booking/'+movie.id]); 
+  this.router.navigate(['./booking/'+movie.id]);} 
 }
 
 }

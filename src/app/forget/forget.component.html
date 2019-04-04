@@ -1,12 +1,46 @@
-<ion-content padding>
-<ion-card>
-  <ion-card-header>Forgot Password?</ion-card-header>
- 
-  <input type="text" placeholder="Name">
-  
-  <input type="text" placeholder="Email">
-  <input type="text" placeholder="Mobile">
-  <ion-button color="primary" expand="block" >Reset Password</ion-button>
 
-</ion-card>
+<ion-content padding>
+    <ion-card-header>
+        <ion-card-title><ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+          (click)="move()"></ion-icon>Forgot Password</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+    <form >
+        <ion-grid>
+          <ion-row justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+             
+              <div padding>
+<ion-card>
+  
+    <ion-item>
+                
+        <ion-input name="username" type="text" placeholder="Name" ><ion-icon name="person"></ion-icon></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input name="mobile" type="text"  placeholder="Mobile" ><ion-icon name="call"></ion-icon></ion-input>
+        </ion-item>
+      <ion-item>
+        <ion-input name="email" type="email"  placeholder="Email" ><ion-icon name="mail"></ion-icon></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input name="setpassword" type="password"  placeholder="new password" ><ion-icon name="key"></ion-icon></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input name="confirmpassword" type="password"  placeholder="confirm password" ><ion-icon name="lock"></ion-icon></ion-input>
+          </ion-item>
+      <br><br>
+     
+      </ion-card>
+      </div>
+    <div padding>
+      <ion-button size="large" type="submit" expand="block" (click)="onLogin()" routerLink="/sign">Reset Password</ion-button>
+    </div>
+
+
+
+</ion-col>
+</ion-row>
+</ion-grid>
+</form></ion-card-content>
 </ion-content>

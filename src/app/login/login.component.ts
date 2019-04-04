@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   customer:any={};
 list=[];
-Link:any="https://wwww.facebook.com"
+
 constructor(private customerService: CustomerService,private router :Router) {
   this.customerService.getDBCustomers();
   

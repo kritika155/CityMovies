@@ -7,9 +7,10 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export default class CustomerService {
-  private movieUrl = 'http://192.168.0.33:3000/api/movies';
-  private customerUrl = 'http://192.168.0.33:3000/api/customers';
-  private bookingUrl = 'http://192.168.0.33:3000/api/bookings';
+  // private movieUrl = 'http://192.168.0.33:3000/api/movies';
+  private movieUrl = 'http://localhost:3000/api/movies'
+  private customerUrl = 'http://localhost:3000/api/customers';
+  private bookingUrl = 'http://localhost:3000/api/bookings';
 
   constructor(private router :Router, private http: HttpClient) { }
   customers = [];
