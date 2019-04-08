@@ -34,5 +34,7 @@ var movies = JSON.parse(localStorage.getItem('movies'));
 console.log(movies);
   this.router.navigate(['./booking/'+movie.id]);} 
 }
-
+logout(){
+  localStorage.clear();
+}
 }

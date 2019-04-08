@@ -11,6 +11,9 @@ span{
     color:red;
     font-size: 18px; 
 }
+#amount{
+    --background:white;
+}
 ion-card{
     background: blueviolet;
 }
@@ -35,3 +38,10 @@ ion-img{
     color:white;
    
 }
+ion-content,ion-toolbar{
+    --background:rgb(3, 46, 83);
+}
+// ion-card{
+//     color:goldenrod;
+//     --background:powderblue;
+// }

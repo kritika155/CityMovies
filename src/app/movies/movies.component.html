@@ -1,7 +1,10 @@
-<ion-content padding>
-  <ion-header>
-      <ion-title>Top Movies</ion-title>
-      </ion-header>
+<ion-header>
+  <ion-toolbar><ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+    (click)="move()"></ion-icon>
+  Top Movies<a id="logout" routerLink="/home" onclick="logout()">Log Out</a></ion-toolbar>
+  </ion-header>
+  <ion-content padding>
+ 
 <div class="list" *ngFor="let movie of list">
     
   

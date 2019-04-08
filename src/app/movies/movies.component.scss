@@ -24,6 +24,11 @@ ion-card{
    
     margin-left: 280px;
 }
+#logout{
+    float: right;
+    font-size: 18px;
+    color:red;
+}
 ion-card-header{
     // text-align: right;
     color: black;
@@ -31,15 +36,21 @@ ion-card-header{
 }
 ion-card-title{
     // text-align: right;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: 500;
     color:red;
     font-family: Georgia, 'Times New Roman', Times, serif
 }
 ion-button{
     float:right;
 }
-ion-title{
+ion-toolbar{
+    --background:rgb(3, 46, 83);
     font-size: 30px;
     color:red;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+ion-header{
+    --background:rgb(20, 138, 235);
 }

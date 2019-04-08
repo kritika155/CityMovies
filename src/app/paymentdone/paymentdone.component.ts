@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router, NavigationEnd  } from '@angular/router';
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-paymentdone',
   templateUrl: './paymentdone.component.html',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentdoneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private _location: Location) { }
 
   ngOnInit() {}
-
+  move(){
+    this._location.back();
+  }
 }

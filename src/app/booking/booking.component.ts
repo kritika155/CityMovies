@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd  } from '@angular/router';
+import {Location} from '@angular/common';
 import  CustomerService   from '../customer.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -19,15 +20,18 @@ numbers :number ;
 
 id:number;
 private sub: any;
-  constructor(private route: ActivatedRoute,private router :Router, private customerService:CustomerService) {  
+  constructor(private route: ActivatedRoute,private router :Router, private customerService:CustomerService,private _location: Location) {  
         this.booking={customer_id:this.customerId.id,tickets:0,movie_id:this.movieL.id,movie_name:this.movieL.name,movie_time:'',theatre:'Tulsi',screen:'Screen 2',city:'Bangalore',movie_date:'',date:'',amount:0,ticket_price:0}
         // this.booking={customer_id:'customerId.id',tickets:'',movie_id:'this.movie.id',movie_name:'this.movie.name',movie_time:'',theatre:'',screen:'',city:'',movie_date:'',date:'',amount:'',ticket_price:''};
+  }
+  move(){
+    this._location.back();
   }
  addBookings()
  {
   var books:any = {customer_id:this.customerId.id,tickets:this.booking.tickets,movie_id:this.movie.id,movie_name:this.movie.name,movie_time:this.booking.movie_time,theatre:'Tulsi',screen:'Screen 2',city:'Bangalore',movie_date:this.booking.movie_date,date:this.booking.date,amount:this.booking.amount,ticket_price:this.booking.ticket_price};
-   this.booking.ticket_price=this.booking.tickets*this.booking.amount;
-   var price:any=this.booking.ticket_price;
+   this.booking.amount=this.booking.tickets*this.booking.ticket_price;
+   var price:any=this.booking.amount;
    localStorage.setItem('price', JSON.stringify(price));
         var priceL = JSON.parse(localStorage.getItem('price'));
         console.log(priceL);
@@ -38,9 +42,9 @@ private sub: any;
  } 
  show(booking){
   var bookit:any = {customer_id:this.customerId.id,tickets:this.booking.tickets,movie_id:this.movie.id,movie_name:this.movie.name,movie_time:this.booking.movie_time,theatre:'Tulsi',screen:'Screen 2',city:'Bangalore',movie_date:this.booking.movie_date,date:this.booking.date,amount:this.booking.amount,ticket_price:this.booking.ticket_price};
-  this.booking.ticket_price=this.booking.tickets*this.booking.amount;
+  this.booking.amount=this.booking.tickets*this.booking.ticket_price;
 
-   return this.booking.ticket_price;
+   return this.booking.amount;
  }
   ngOnInit() {
 

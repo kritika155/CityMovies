@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import  CustomerService   from '../customer.service';
+import { Router  } from '@angular/router';
+import {Location} from '@angular/common';import  CustomerService   from '../customer.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-payment',
@@ -11,7 +11,7 @@ export class PaymentComponent implements OnInit {
   payment:any={};
 priceBooking =JSON.parse(localStorage.getItem('price'));
 priceBook:{price:''};
-  constructor(private route: ActivatedRoute,private router :Router, private customerService:CustomerService) {
+  constructor(private route: ActivatedRoute,private router :Router, private customerService:CustomerService,private _location: Location) {
   this.priceBook={price:this.priceBooking};
 
    }
@@ -19,5 +19,7 @@ priceBook:{price:''};
   ngOnInit() {
     console.log(this.priceBooking);
   }
-
+  move(){
+    this._location.back();
+  }
 }
