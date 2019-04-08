@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar><ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
-    (click)="move()"></ion-icon></ion-toolbar>
+    (click)="move()"></ion-icon>{{movie.name}}</ion-toolbar>
 </ion-header>
 <ion-content>
    <ion-card>
-      <ion-card-header>{{movie.name}}</ion-card-header><br>
+      <!-- <ion-card-header>{{movie.name}}</ion-card-header><br> -->
       <div class="container">
         <div id="image">
           <ion-img src={{movie.image_url}}></ion-img>

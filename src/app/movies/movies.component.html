@@ -1,17 +1,19 @@
 <ion-header>
   <ion-toolbar><ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
     (click)="move()"></ion-icon>
-  Top Movies<a id="logout" routerLink="/home" onclick="logout()">Log Out</a></ion-toolbar>
+  Top Movies
+  <a id="logout" name="logout" (click)="logOut()">Log Out</a>
+
+</ion-toolbar>
   </ion-header>
   <ion-content padding>
- 
 <div class="list" *ngFor="let movie of list">
     
   
   
           <div > 
         <ion-card> 
-           <ion-card-header><ion-card-title>{{movie.name}}<ion-button  name="edit"  (click)="onSelect(movie)">book</ion-button></ion-card-title>
+           <ion-card-header><ion-card-title>{{movie.name}}<ion-button  name="book"  (click)="onSelect(movie)">book</ion-button></ion-card-title>
            </ion-card-header>  
            <ion-grid>            
         <span class="fl">

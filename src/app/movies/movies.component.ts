@@ -8,12 +8,16 @@ import {Location} from '@angular/common';
   styleUrls: ['./movies.component.scss'],
 })
 export class MoviesComponent implements OnInit {
+  logout=[];
   movie={id:'',name:'', year:'', image_url:'', production_house:'',rating:'',type:'',language:'',date:''};
-
+  customerId= JSON.parse(localStorage.getItem('users'));
 movies:any={};
 list=[];
   constructor(private customerService: CustomerService,private router:Router,private _location: Location) {
-
+    if(localStorage.getItem('users') == null){
+      this.router.navigate(['./login']);
+  }
+  
    }
 
   ngOnInit() {
@@ -32,9 +36,16 @@ if(localStorage.getItem('users')!='null'){
   localStorage.setItem('movies', JSON.stringify(movie));
 var movies = JSON.parse(localStorage.getItem('movies'));
 console.log(movies);
-  this.router.navigate(['./booking/'+movie.id]);} 
+  this.router.navigate(['./booking/'+movie.id]);
 }
-logout(){
+ 
+}
+logOut(){
+ 
+  this.logout=JSON.parse(localStorage.getItem('users'));
+  console.log(this.logout);
   localStorage.clear();
+  this.router.navigate(['./login']);
+
 }
 }
