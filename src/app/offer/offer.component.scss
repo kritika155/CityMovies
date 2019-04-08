@@ -1,0 +1,27 @@
+ion-card{
+    text-align: center;
+    height:100%;
+//   margin:80px 50px;
+//   padding:50px;
+  font-size:23px;
+  --background:Navy;
+  color:white;
+   
+}
+ion-button{
+    text-align: center;
+    position: relative;
+    margin-left: 120px;
+}
+ion-content{
+  --background:rgb(109, 109, 241);
+}
+ion-toolbar{
+  --background:rgb(109, 109, 160);
+}
+  ion-header{
+    color: black;
+  }
+
+
+

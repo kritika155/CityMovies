@@ -1,23 +1,40 @@
 
 ion-content{
-    --background: navy;
+    --background: rgb(150, 150, 230);
     --background-size: cover;
     --background-position: center;
     --background-repeat: no-repeat;
+    color:white;
 }
 
 // ion-img{
 // margin-top: 200px;
 // }
 ion-toolbar{
-    --background:red;  
+    --background:rgb(9, 9, 70);
+    color:white;  
+}
+ion-footer{
+    
+    color:white;
 } 
 ion-card{
     --background:white;
 }
 .a{
     width:30%;
+    --color:white; 
 }
 .image h1{
+    color:white;
+}
+// .foot{
+//     --background:rgb(109, 109, 241);
+//     color:white;
+// }
+ion-footer>div{
+    width:20%;
+    display:inline-block;
+    --background:rgb(109, 109, 241);
     color:white;
 }

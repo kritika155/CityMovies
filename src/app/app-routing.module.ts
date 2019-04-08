@@ -12,6 +12,7 @@ import {PaymentdoneComponent} from './paymentdone/paymentdone.component';
 import {TheaterComponent} from './theater/theater.component';
 import {ProfileComponent} from './profile/profile.component';
 import {AddOnsComponent} from './add-ons/add-ons.component';
+import {SearchComponent} from './search/search.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'login',component:LoginComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:'theater',component:TheaterComponent},
   {path:'profile',component:ProfileComponent},
   {path:'addmovie',component:AddmovieComponent},
+  {path:'search',component:SearchComponent},
 
  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
 ];

@@ -36,6 +36,15 @@ const routes: Routes = [
       },
      
       {
+        path: 'search',
+        children: [
+          {
+            path: '',
+            loadChildren: '../search/search.module#SearchPageModule'
+          }
+        ]
+      },
+      {
         path: 'profile',
         children: [
           {

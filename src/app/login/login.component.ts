@@ -22,9 +22,7 @@ constructor(private customerService: CustomerService,private router :Router) {
     // this.customerService.getCustomers(this.customer);
 
   }
- facebook(){
-
- }
+ 
   doLogin(customer){
     for(var i=0;i<this.list.length;i++)
     {

@@ -21,10 +21,11 @@ import {PaymentdoneComponent} from './paymentdone/paymentdone.component';
 import {TheaterComponent} from './theater/theater.component';
 import {ProfileComponent} from './profile/profile.component';
 import {AddOnsComponent} from './add-ons/add-ons.component';
+import {SearchComponent} from './search/search.component';
 
 
 @NgModule({
-  declarations: [AppComponent,AddOnsComponent,PaymentdoneComponent,ProfileComponent,TheaterComponent,AddmovieComponent,LoginComponent,MoviesComponent,RegisterComponent,ForgetComponent,BookingComponent,PaymentComponent,OfferComponent],
+  declarations: [AppComponent,AddOnsComponent,SearchComponent,PaymentdoneComponent,ProfileComponent,TheaterComponent,AddmovieComponent,LoginComponent,MoviesComponent,RegisterComponent,ForgetComponent,BookingComponent,PaymentComponent,OfferComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,FormsModule],
   providers: [
