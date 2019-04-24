@@ -39,7 +39,7 @@ list=[];
   }
     addCustomer(customer){
 this.customerService.addRemoteCustomer(this.customer).subscribe(()=>{this.router.navigate(['/login']);});
-
+this.router.navigate(['/login']);
     }
     move(){
       this._location.back();
