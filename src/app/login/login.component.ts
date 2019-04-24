@@ -16,9 +16,11 @@ message;
 message2;
 OTP='';
 verifyOTP;
-constructor(private customerService: CustomerService,private router :Router,public alertController: AlertController) {
+constructor(private customerService: CustomerService,private router :Router,
+  public alertController: AlertController) {
   this.customerService.getDBCustomers();
- 
+  this.customerService.getRemoteCustomers().subscribe((result)=>{this.list=result;});
+
  }
 
   ngOnInit() {
