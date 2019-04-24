@@ -6,6 +6,7 @@
 
 </ion-toolbar>
   </ion-header>
+  <hr>
   <ion-content padding>
 <div class="list" *ngFor="let movie of list">
     
@@ -25,7 +26,9 @@
          <span>Year:</span>{{movie.year}}<br>
          
           <span>Production House:</span>{{movie.production_house}}<br>
-          <span>Rating:</span>{{movie.rating}}<br>
+          <span>Rating:<ion-badge color="secondary">{{movie.rating}}</ion-badge></span>
+          <!-- {{movie.rating}} -->
+          <br>
           <span>Type:</span>{{movie.type}}<br>
           <span>Language:</span>{{movie.language}}<br>
           <span>Movie-date:</span>{{movie.date}}<br></ion-col></ion-row> 

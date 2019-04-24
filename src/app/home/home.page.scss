@@ -12,7 +12,10 @@ ion-content{
 // }
 ion-toolbar{
     --background:rgb(9, 9, 70);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:white;  
+    text-align: center;
+    font-weight: 900;
 }
 ion-footer{
     
@@ -21,12 +24,17 @@ ion-footer{
 ion-card{
     --background:white;
 }
+#world{
+    text-align: justify;
+}
+
 .a{
     width:30%;
     --color:white; 
 }
 .image h1{
     color:white;
+    text-align: center;
 }
 // .foot{
 //     --background:rgb(109, 109, 241);
@@ -37,4 +45,10 @@ ion-footer>div{
     display:inline-block;
     --background:rgb(109, 109, 241);
     color:white;
+}
+.image{
+    margin-left: 30px;
+}
+ion-card-title{
+    text-align: center;
 }

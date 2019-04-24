@@ -13,18 +13,34 @@
            
     <!-- <ion-card-header>Register</ion-card-header> -->
     <!-- <input type="text" placeholder="id" [(ngModel)]="customer.id" readonly> -->
-    <ion-item><ion-input name="username"  type="text" placeholder="name" [(ngModel)]="customer.name"><ion-icon name="person"></ion-icon>
+    <ion-item><ion-input name="username" type="text" placeholder="name" [(ngModel)]="customer.name"><ion-icon name="person"></ion-icon>
     </ion-input></ion-item><br>
 
     <ion-item><ion-input name="password" type="password"  placeholder="Password" [(ngModel)]="customer.password"><ion-icon name="key">
 
     </ion-icon></ion-input>
       </ion-item><br>
-    <ion-item><ion-input type="text" placeholder="address" [(ngModel)]="customer.address"><ion-icon name="home"></ion-icon>
+    <ion-item><ion-input name="address" type="text" placeholder="address" [(ngModel)]="customer.address"><ion-icon name="home"></ion-icon>
     </ion-input></ion-item><br>
     <ion-item><ion-input name="email" type="email" placeholder="Email"[(ngModel)]="customer.email" ><ion-icon name="mail"></ion-icon></ion-input>
     </ion-item><br>
-    <ion-item><ion-input type="text" placeholder="phone" [(ngModel)]="customer.phone"><ion-icon name="phone-portrait"></ion-icon></ion-input></ion-item><br>
+    <ion-item><ion-input type="text" name="phone" placeholder="phone" [(ngModel)]="customer.phone"><ion-icon name="phone-portrait"></ion-icon></ion-input></ion-item><br>
+    <ion-item>
+      <ion-label>Security Questions</ion-label>
+      <ion-select name="security_question" placeholder="Select Security Questions" [(ngModel)]="customer.security_question">
+        <ion-select-option value="favourite color">Name of your favourite color?</ion-select-option>
+        <ion-select-option value="Your birthplace">Name of your birthplace?</ion-select-option>
+        <ion-select-option value="Name of Pet">Name of your Pet?</ion-select-option>
+        <ion-select-option value="Your favourite Teacher">Your favourite Teacher?</ion-select-option>
+        <ion-select-option value="Your favourite Counrty">Your favourite Counrty?</ion-select-option>
+        <ion-select-option value="Your favourite City in India">Your favourite City in India?</ion-select-option>
+       
+      </ion-select>
+    </ion-item>
+    <ion-label style="color:white;font-size:23px;">{{customer.security_question}}</ion-label>
+    <ion-item>
+      <ion-input  type="text" name="answer" placeholder="Type your answer" [(ngModel)]="customer.answer"></ion-input>
+    </ion-item>
 <!-- <input type="button" value="Register" (click)="addCustomer(customer)"> -->
   </ion-card>
   <!-- <div *ngFor='let customer of list'>

@@ -16,12 +16,12 @@ movieL=JSON.parse(localStorage.getItem('movies'));
 booking:{customer_id:number,tickets:number,movie_id:number,movie_name:string,movie_time:any,theatre:string,screen:string,city:string,movie_date:any,date:any,amount:number,ticket_price:number};
 
 movie:any;
-numbers :number ;
+// numbers :number ;
 
 id:number;
 private sub: any;
   constructor(private route: ActivatedRoute,private router :Router, private customerService:CustomerService,private _location: Location) {  
-        this.booking={customer_id:this.customerId.id,tickets:0,movie_id:this.movieL.id,movie_name:this.movieL.name,movie_time:'',theatre:'Tulsi',screen:'Screen 2',city:'Bangalore',movie_date:'',date:'',amount:0,ticket_price:0}
+        this.booking={customer_id:this.customerId.id,tickets:0,movie_id:this.movieL.id,movie_name:this.movieL.name,movie_time:'',theatre:'Tulsi',screen:'Screen 2',city:'Bangalore',movie_date:'',date:'',amount:0,ticket_price:250}
         // this.booking={customer_id:'customerId.id',tickets:'',movie_id:'this.movie.id',movie_name:'this.movie.name',movie_time:'',theatre:'',screen:'',city:'',movie_date:'',date:'',amount:'',ticket_price:''};
   }
   move(){

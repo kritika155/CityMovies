@@ -14,35 +14,67 @@ span{
 #amount{
     --background:white;
 }
-ion-card{
-    background: blueviolet;
-}
+// ion-card{
+//     background: blueviolet;
+//     box-shadow: 2px 2px 18px #120227;
+//     border-radius: 1%;
+// }
 #image{
     width: 45%;
 }
 ion-button{
     text-align: center;
-    margin-left:150px;
+    // margin-left:120px;
 }
 ion-img{
     width: 100%;
+    background-size: content;
 }
 #lab{
     width:55%;
     padding-left: 20px;
-    font-size: 18px;
-
+    font-size: 14px;
+    margin-top:18px;;
+    text-align: left;
+}
+span{
+    text-align: left;
+   font-weight: 300;
+    font-size: 14px;
+    font-weight: 900;
 }
 .container{
     display: flex;
     color:white;
    
 }
-ion-content,ion-toolbar{
+ion-toolbar{
     text-align: center;
-    font-size: 20px;
-    color:white;
+    font-size: 25px;
+    font-weight: 900;
+    color:red;
     --background:rgb(3, 46, 83);
+}
+ion-content{
+    text-align: center;
+    font-size: 15px;
+    // font-weight: 900;
+    color:red;
+    --background:rgb(3, 46, 83);
+}
+#info{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    color:red;
+    --background:rgb(3, 46, 83);
+}
+#bb{
+    --background:rgb(3, 43, 75);
+    // background: blueviolet;
+    box-shadow: 2px 2px 18px #120227;
+    border-radius: 1%;
+ 
 }
 // ion-card{
 //     color:goldenrod;

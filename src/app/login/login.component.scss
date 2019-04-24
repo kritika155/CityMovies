@@ -6,20 +6,27 @@ ion-card-header{
     color: white;
     font-size: 23px;
     font-weight: 500;
+font-family:'Times New Roman', Times, serif;
+font-style:bold;
 }
 #forgot{
     margin-left: 80px;
     // text-align: center;
     color:white;
-    font-size: 23px;
+    font-size: 20px;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.message{
+    color:red;
+    font-size: 23px;
 }
 #new{
     margin-top:500px;
     margin-left: 130px;
     // text-align: center;
     color:white;
-    font-size: 23px;
+    font-size: 20px;
     text-decoration: none;
 }
 p{

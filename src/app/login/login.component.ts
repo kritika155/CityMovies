@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import  CustomerService  from '../customer.service';
+import { AlertController } from '@ionic/angular';
 
 import { Router } from '@angular/router';
 
@@ -11,10 +12,11 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   customer:any={};
 list=[];
-
-constructor(private customerService: CustomerService,private router :Router) {
+message;
+message2;
+constructor(private customerService: CustomerService,private router :Router,public alertController: AlertController) {
   this.customerService.getDBCustomers();
-  
+ 
  }
 
   ngOnInit() {
@@ -34,12 +36,28 @@ constructor(private customerService: CustomerService,private router :Router) {
         localStorage.setItem('users', JSON.stringify(this.customer));
         this.customer = JSON.parse(localStorage.getItem('users'));
         console.log(customer);
+        this.message='';
+        this.message2='';
         this.router.navigate(['/movies']);
        
-        break;
+       
       }
-      
+      else{
+        this.message='Login Failed!';
+        this.message2='Email or password does not work';
+        // this.presentAlert();
+        // break;
+      }
     }
   }
-
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'login failed',
+      subHeader: '',
+      message: 'Email or password does not work',
+      buttons: ['OK']
+    });
+  
+    await alert.present();
+  }
 }

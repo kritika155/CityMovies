@@ -13,7 +13,7 @@
               <div padding>
 <ion-card>
   
-    <ion-item>
+    <!-- <ion-item>
                 
         <ion-input name="username" type="text" placeholder="Name" ><ion-icon name="person"></ion-icon></ion-input>
       </ion-item>
@@ -21,24 +21,51 @@
           <ion-input name="mobile" type="text"  placeholder="Mobile" ><ion-icon name="call"></ion-icon></ion-input>
         </ion-item>
       <ion-item>
-        <ion-input name="email" type="email"  placeholder="Email" ><ion-icon name="mail"></ion-icon></ion-input>
+        <ion-input name="email" [(ngModel)]="customer.email" type="email"  placeholder="Email"  ><ion-icon name="mail"></ion-icon></ion-input>
       </ion-item>
       <ion-item>
-          <ion-input name="setpassword" type="password"  placeholder="new password" ><ion-icon name="key"></ion-icon></ion-input>
+          <ion-input name="setpassword" [(ngModel)]="customer.password" type="password"  placeholder="new password" ><ion-icon name="key"></ion-icon></ion-input>
         </ion-item>
         <ion-item>
-            <ion-input name="confirmpassword" type="password"  placeholder="confirm password" ><ion-icon name="lock"></ion-icon></ion-input>
+            <ion-input name="confirmpassword" type="password" [(ngModel)]="customer.password"  placeholder="confirm password" ><ion-icon name="lock"></ion-icon></ion-input>
           </ion-item>
-      <br><br>
-     
+      <br><br> -->
+      <ion-item>
+
+          <ion-label floating><ion-icon name="person"></ion-icon></ion-label>
+          <ion-input name="email" type="text" placeholder="Email" [(ngModel)]="customer.email"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Security Questions</ion-label>
+              <ion-select name="security_question" placeholder="Select Security Questions" [(ngModel)]="customer.security_question">
+                  <ion-select-option value="favourite color">Name of your favourite color?</ion-select-option>
+                  <ion-select-option value="Your birthplace">Name of your birthplace?</ion-select-option>
+                  <ion-select-option value="Name of Pet">Name of your Pet?</ion-select-option>
+                  <ion-select-option value="Your favourite Teacher">Your favourite Teacher?</ion-select-option>
+                  <ion-select-option value="Your favourite Counrty">Your favourite Counrty?</ion-select-option>
+                  <ion-select-option value="Your favourite City in India">Your favourite City in India?</ion-select-option>
+                 
+                </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" [(ngModel)]="customer.answer" name="answer" placeholder="Type your answer which you have saved for this security question"></ion-input>
+            </ion-item>
+         
       </ion-card>
       </div>
     <div padding>
-      <ion-button size="large" type="submit" expand="block" (click)="onLogin()" routerLink="/sign">Reset Password</ion-button>
+      <ion-button size="large" type="submit" expand="block" (click)="reset(customer)" >Reset Password</ion-button>
     </div>
 
-
-
+    <div padding>
+        <ion-button size="large" type="submit" expand="block" (click)="log()" >Log In</ion-button>
+      </div>
+      <ion-item>
+          <ion-icon name="key"></ion-icon>
+        <ion-input type="text" name="pass" placeholder="Password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+<ion-item><ion-label style='color:white;font-size: 23px;'>{{message}}</ion-label>
+</ion-item>
 </ion-col>
 </ion-row>
 </ion-grid>

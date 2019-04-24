@@ -3,7 +3,7 @@
     (click)="move()"></ion-icon>{{movie.name}}</ion-toolbar>
 </ion-header>
 <ion-content>
-   <ion-card>
+   <ion-card id="bb">
       <!-- <ion-card-header>{{movie.name}}</ion-card-header><br> -->
       <div class="container">
         <div id="image">
@@ -11,42 +11,49 @@
          </div>
   
 <div id="lab">  
-  Year:<span>{{movie.year}}</span><br>
- Production House:<span>{{movie.production_house}}</span><br>
-  Rating:<span>{{movie.rating}}</span><br>
- Type:<span>{{movie.type}}</span><br>
- Language: <span>{{movie.language}}</span><br>
- Movie-date:<span>{{movie.date}}</span><br>
+  <span>Year:</span>{{movie.year}}<br>
+ <!-- Production House:<span>{{movie.production_house}}</span><br> -->
+  <span>Rating:</span>{{movie.rating}}<br>
+ <span>Type:</span>{{movie.type}}<br>
+<span> Language: </span>{{movie.language}}<br>
+<span> Movie-date:</span>{{movie.date}}<br>
 </div>
 </div>
    </ion-card>
  
-<ion-card>
+<ion-card id="info">
   <ion-card-header>Booking Information</ion-card-header>
       <!-- <input type="number" placeholder="customer id" [(ngModel)]="customer.id"><br> -->
 <ion-item>
-  <ion-label>Tickets</ion-label>
+  <ion-label>Tickets:</ion-label>
   <ion-input type="number" placeholder="tickets" [(ngModel)]="booking.tickets"></ion-input></ion-item> <br>
 <ion-item>
-    <ion-label>Movie Id</ion-label>
+    <ion-label>Movie Id:</ion-label>
     <ion-input type="number" placeholder="movie id" [(ngModel)]="movie.id" readonly></ion-input></ion-item><br>
 <ion-item>
-   
+    <ion-label>Movie Name:</ion-label>
+
     <ion-input type="text" placeholder="movie name" [(ngModel)]="movie.name" readonly></ion-input></ion-item><br>
 <ion-item><ion-input type="text" placeholder="movie time" [(ngModel)]="booking.movie_time"></ion-input></ion-item><br>
-<ion-item><ion-input type="text" placeholder="theater" [(ngModel)]="booking.theatre"></ion-input></ion-item><br>
-<ion-item><ion-input type="text" placeholder="screen" [(ngModel)]="booking.screen"></ion-input></ion-item><br>
+<ion-item>    <ion-label>Theater:</ion-label>
+  <ion-input type="text" placeholder="theater" [(ngModel)]="booking.theatre"></ion-input></ion-item><br>
+<ion-item>    <ion-label>Screen:</ion-label>
+
+  <ion-input type="text" placeholder="screen" [(ngModel)]="booking.screen"></ion-input></ion-item><br>
 <ion-item><ion-input type="text" placeholder="city" [(ngModel)]="booking.city"></ion-input></ion-item><br>
-<ion-item><ion-input type="date" placeholder="movie date" [(ngModel)]="booking.movie_date"></ion-input></ion-item><br>
-<ion-item><ion-input type="date" placeholder="date" [(ngModel)]="booking.date"></ion-input></ion-item><br>
+<ion-item>    <ion-label>Movie Date:</ion-label>
+  <ion-input type="date" placeholder="movie date" [(ngModel)]="booking.movie_date"></ion-input></ion-item><br>
+<ion-item>    <ion-label>Date of booking:</ion-label>
+  <ion-input type="date" placeholder="date" [(ngModel)]="booking.date"></ion-input></ion-item><br>
 <ion-item><ion-label>Ticket Price:</ion-label>
-  <ion-input type="number" placeholder="ticket price" [(ngModel)]="booking.ticket_price"></ion-input></ion-item><br>
-<div id="amount"><ion-label>Total Amount:{{booking.amount}}</ion-label></div>
+  <ion-input type="number" placeholder="ticket price" [(ngModel)]="booking.ticket_price"></ion-input>
+</ion-item><br>
+<div ><ion-label id="amount">Pay:{{booking.amount}}</ion-label></div>
   <br>
-<ion-button color="primary" (click)="show(booking)"  name="booking">Confirm</ion-button>
+<ion-button color="primary" (click)="show(booking)"  name="booking" id="confirm">Confirm</ion-button>
 
 </ion-card>
-<ion-button color="primary" (click)="addBookings(booking)"  name="booking">Book</ion-button>
+<ion-button color="primary" (click)="addBookings(booking)"  name="booking" id="book">Book</ion-button>
 
  
 

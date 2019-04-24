@@ -6,19 +6,23 @@ span{
     height: 5%;
     text-align: center;
     font-size: 15px;
-    color:red;
+    color:rgb(24, 1, 1);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 img{
     width:100%;
 }
 ion-content{
-    --background:rgb(20, 138, 235);
+    // --background:rgb(20, 138, 235);
+    --background:rgb(3, 46, 83);
+    box-shadow: 2px 2px 18px #120227;
 }
 h1{text-align: center;}
 ion-card{
-    color:goldenrod;
+    color:red;
     --background:powderblue;
+    box-shadow: 2px 2px 18px #120227;
+    
 }
 .fl{
    
@@ -47,6 +51,7 @@ ion-button{
 ion-toolbar{
     --background:rgb(3, 46, 83);
     font-size: 30px;
+    font-weight: 900;
     color:red;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
