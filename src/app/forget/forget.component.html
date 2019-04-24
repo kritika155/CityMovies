@@ -35,9 +35,10 @@
           <ion-label floating><ion-icon name="person"></ion-icon></ion-label>
           <ion-input name="email" type="text" placeholder="Email" [(ngModel)]="customer.email"></ion-input>
           </ion-item>
+         <ion-item> <ion-label style="color:white;font-size: 23px;" floating><ion-icon name="help"></ion-icon>Your Security Question</ion-label></ion-item>
+
           <ion-item>
-              <ion-label>Security Questions</ion-label>
-              <ion-select name="security_question" placeholder="Select Security Questions" [(ngModel)]="customer.security_question">
+              <ion-select name="security_question" placeholder="Select Security Questions" [(ngModel)]="customer.security_question" style="color:white;font-size: 23px;">
                   <ion-select-option value="favourite color">Name of your favourite color?</ion-select-option>
                   <ion-select-option value="Your birthplace">Name of your birthplace?</ion-select-option>
                   <ion-select-option value="Name of Pet">Name of your Pet?</ion-select-option>
@@ -47,8 +48,8 @@
                  
                 </ion-select>
             </ion-item>
-            <ion-item>
-              <ion-input type="text" [(ngModel)]="customer.answer" name="answer" placeholder="Type your answer which you have saved for this security question"></ion-input>
+            <ion-item><ion-icon name="clipboard"></ion-icon>
+              <ion-input type="text" [(ngModel)]="customer.answer" name="answer" placeholder="Answer you saved"></ion-input>
             </ion-item>
             
             <ion-item>
@@ -57,21 +58,27 @@
             <ion-item>
                 <ion-input type="text" [(ngModel)]="verifyOTP" name="OTP" placeholder="Type your OTP"></ion-input>
               </ion-item>
-      </ion-card>
-      </div>
-    <div padding>
-      <ion-button size="large" type="submit" expand="block" (click)="reset(customer)" >Reset Password</ion-button>
-    </div>
-
-    <div padding>
-        <ion-button size="large" type="submit" expand="block" (click)="log()" >Log In</ion-button>
-      </div>
+              <div class="button">
+                  <ion-button size="large" type="submit" expand="block" (click)="reset(customer)" >Reset Password</ion-button>
+                </div>
+           
+             
       <ion-item>
           <ion-icon name="key"></ion-icon>
         <ion-input type="text" name="pass" placeholder="Get Password" [(ngModel)]="password"></ion-input>
         </ion-item>
 <ion-item><ion-label style='color:white;font-size: 23px;'>{{message}}</ion-label>
 </ion-item>
+
+ 
+      </ion-card>
+      </div>
+      <div class="button">
+          <!-- <ion-button size="large" type="submit" expand="block" (click)="log()" >Log In</ion-button> -->
+          <a (click)="log()">Log In</a>
+        </div> 
+
+  
 </ion-col>
 </ion-row>
 </ion-grid>

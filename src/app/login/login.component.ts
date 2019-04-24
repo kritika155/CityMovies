@@ -55,7 +55,10 @@ constructor(private customerService: CustomerService,private router :Router,
       }
       else{
         this.message='Login Failed!';
-        this.message2='Email or password does not work';
+        this.message+='';
+
+        this.message+='Email or password does not work';
+        // this.message2='Email or password does not work';
         // this.presentAlert();
        
       }

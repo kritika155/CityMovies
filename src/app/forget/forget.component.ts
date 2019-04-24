@@ -10,8 +10,8 @@ import { Router } from '@angular/router';@Component({
 })
 export class ForgetComponent implements OnInit {
   customer={email:'',security_question:'',answer:''};
-  password;
-  message;
+  password='';
+  message='';
 list=[];
 OTP='';
 verifyOTP;
@@ -45,10 +45,13 @@ verifyOTP;
         if(customer.answer==this.list[i].answer){
          
          if(this.OTP==this.verifyOTP){
-          this.password=this.list[i].password;
+           this.password+='Password:';
+          this.password+=this.list[i].password;
           console.log('password successful');
           console.log(this.password);
-          this.message='Password Successful';
+          
+
+          this.message+='Password Successful';
          }
           else{
             console.log('OTP does not match!Try Again');
