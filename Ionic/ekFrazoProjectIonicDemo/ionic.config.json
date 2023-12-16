@@ -1,0 +1,7 @@
+{
+  "name": "ekFrazoProjectIonicDemo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

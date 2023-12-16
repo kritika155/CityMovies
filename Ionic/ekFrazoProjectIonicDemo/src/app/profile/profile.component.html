@@ -1,0 +1,69 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+      (click)="move()"></ion-icon>
+
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+  <ion-content>
+
+
+    <div>
+      <ion-card style="background:linear-gradient(0deg,rgb(255, 255, 255),rgb(73, 15, 209));background-size: 350px;">
+  
+        <div text-center style="padding:20px;">
+  
+          <ion-icon name="person" style="  font-size: 50px;color:white "></ion-icon> <br>
+  
+          <ion-button style="margin: 20px;" size="medium" (click)="loginPage()">Login / Sign up</ion-button><br>
+  
+        </div>
+  
+      </ion-card>
+    </div>
+    <ion-list>
+  
+      <ion-card>
+        <ion-item>
+          <a routerLink="/offer">
+            <ion-icon name="cafe"></ion-icon> Offers
+          </a>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="notifications-outline"></ion-icon> Notifications
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="settings"></ion-icon> Settings
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="star-half"></ion-icon> Rate our App
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="document"></ion-icon> Privacy Policy
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="help-buoy"></ion-icon> Help & Feedback
+          </ion-label>
+        </ion-item>
+      </ion-card>
+  
+     
+  
+    </ion-list>
+  
+  </ion-content>
+
+  

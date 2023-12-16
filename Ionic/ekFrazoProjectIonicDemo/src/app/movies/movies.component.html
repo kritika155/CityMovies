@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar
+    ><ion-icon
+      name="arrow-round-back"
+      color="primary"
+      style="font-size: 40px; float: left; left: 0; margin: 0"
+      (click)="move()"
+    ></ion-icon>
+    Top Movies
+    <a id="logout" name="logout" (click)="logOut()">Log Out</a>
+  </ion-toolbar>
+</ion-header>
+<hr />
+<ion-content padding>
+  <div class="list" *ngFor="let movie of list">
+    <div>
+      <ion-card>
+        <ion-card-header
+          ><ion-card-title
+            >{{ movie.name
+            }}<ion-button name="book" (click)="onSelect(movie)"
+              >book</ion-button
+            ></ion-card-title
+          >
+        </ion-card-header>
+        <ion-grid>
+          <span class="fl"> </span>
+          <br />
+          <ion-row
+            ><ion-col>
+              <img
+                src="{{ movie?.image_url }}"
+                alt="{{ movie?.image_url }}"
+              /> </ion-col
+            ><ion-col>
+              <span>Year:</span>{{ movie?.year }}<br />
+
+              <span>Production House:</span>{{ movie?.production_house }}<br />
+              <span
+                >Rating:<ion-badge color="secondary">{{
+                  movie?.rating
+                }}</ion-badge></span
+              >
+              <!-- {{movie.rating}} -->
+              <br />
+              <span>Type:</span>{{ movie?.type }}<br />
+              <span>Language:</span>{{ movie?.language }}<br />
+              <span>Movie-date:</span>{{ movie?.date }}<br /></ion-col
+          ></ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+
+    <hr />
+    <hr />
+  </div>
+</ion-content>

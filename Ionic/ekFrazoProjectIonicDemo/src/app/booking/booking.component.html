@@ -1,0 +1,151 @@
+<ion-header>
+  <ion-toolbar
+    ><ion-icon
+      name="arrow-round-back"
+      color="primary"
+      style="font-size: 40px; float: left; left: 0; margin: 0"
+      (click)="move()"
+    ></ion-icon
+    >{{ movie.name }}</ion-toolbar
+  >
+</ion-header>
+<ion-content>
+  <ion-card id="bb">
+    <!-- <ion-card-header>{{movie.name}}</ion-card-header><br> -->
+    <div class="container">
+      <div id="image">
+        <ion-img src="{{ movie.image_url }}"></ion-img>
+      </div>
+
+      <div id="lab">
+        <span>Year:</span>{{ movie.year }}<br />
+        <!-- Production House:<span>{{movie.production_house}}</span><br> -->
+        <span>Rating:</span>{{ movie.rating }}<br />
+        <span>Type:</span>{{ movie.type }}<br />
+        <span> Language: </span>{{ movie.language }}<br />
+        <span> Release-date:</span>{{ movie.date }}<br />
+      </div>
+    </div>
+  </ion-card>
+
+  <ion-card id="info">
+    <ion-card-header>Booking Information</ion-card-header>
+    <!-- <input type="number" placeholder="customer id" [(ngModel)]="customer.id"><br> -->
+    <ion-item>
+      <!-- <ion-input>
+        <ion-label>Tickets:</ion-label>
+        <input type="text" [(ngModel)]="ticket" placeholder="tickets" />
+      </ion-input> -->
+
+      <ion-label>Tickets:</ion-label>
+      <ion-input
+        type="number"
+        placeholder="ticket"
+        [(ngModel)]="ticket"
+        (ionInput)="getTicketNumber(ticket)"
+        id="ticket"
+      ></ion-input
+    ></ion-item>
+    {{ ticket }}
+    <br />
+    <ion-item>
+      <ion-label>Movie Id:</ion-label>
+      <ion-input
+        type="number"
+        placeholder="movie Id"
+        [(ngModel)]="movie.Id"
+        readonly
+      ></ion-input> </ion-item
+    ><br />
+    <ion-item>
+      <ion-label>Movie Name:</ion-label>
+
+      <ion-input
+        type="text"
+        placeholder="movie name"
+        [(ngModel)]="movie.moviename"
+        readonly
+      ></ion-input></ion-item
+    ><br />
+    <ion-item
+      ><ion-input
+        type="text"
+        placeholder="movie time"
+        [(ngModel)]="timestamp"
+      ></ion-input></ion-item
+    ><br />
+    <ion-item>
+      <ion-label>Theater:</ion-label>
+      <ion-input
+        type="text"
+        placeholder="theater"
+        [(ngModel)]="books.theatre"
+      ></ion-input></ion-item
+    ><br />
+    <ion-item>
+      <ion-label>Screen:</ion-label>
+
+      <ion-input
+        type="text"
+        placeholder="screen"
+        [(ngModel)]="books.screen"
+      ></ion-input></ion-item
+    ><br />
+    <ion-item
+      ><ion-input
+        type="text"
+        placeholder="city"
+        [(ngModel)]="books.city"
+      ></ion-input></ion-item
+    ><br />
+    <ion-item>
+      <ion-label>Movie Date:</ion-label>
+      <ion-input
+        type="text"
+        placeholder="movie date"
+        [(ngModel)]="ddmmyyyy"
+      ></ion-input></ion-item
+    ><br />
+    <ion-item>
+      <ion-label>Booking Date:</ion-label><br />
+      <ion-input
+        type="text"
+        placeholder="date"
+        [(ngModel)]="ddmmyyyy"
+      ></ion-input></ion-item
+    ><br />
+    <ion-item
+      ><ion-label>Ticket Price:</ion-label>
+      <ion-input
+        type="number"
+        placeholder="ticket price"
+        [(ngModel)]="ticket_price"
+      ></ion-input> </ion-item
+    ><br />
+    <div>
+      <ion-label id="amount">Pay:{{ booking_amount }}</ion-label>
+    </div>
+    <br />
+    <!-- <ion-button
+      color="primary"
+      (click)="show(booking)"
+      name="booking"
+      id="confirm"
+      >Confirm</ion-button
+    > -->
+    <ion-button color="primary" id="present-alert" name="booking"
+      >confirm</ion-button
+    >
+    <ion-alert
+      trigger="present-alert"
+      header="Alert!"
+      [buttons]="alertButtons"
+      (didDismiss)="setResult($event)"
+    ></ion-alert>
+  </ion-card>
+  <ion-button color="primary" (click)="addBookings()" name="booking" id="book"
+    >Book</ion-button
+  >
+</ion-content>
+<!-- booking={customer_id:'',tickets:'',movie_id:'',movie_name:'',movie_time:'',theatre:'',screen:'',city:'',movie_date:'',date:'',amount:'',ticket_price:''}; -->
+<!-- <ion-input type="text" [(ngModel)]="booking.ticket_price"></ion-input> -->

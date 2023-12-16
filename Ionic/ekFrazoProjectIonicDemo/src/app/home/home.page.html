@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+      <!-- <ion-icon name="camera"></ion-icon> -->
+      <ion-title>
+          City Movies
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+<ion-content padding>
+  <ion-card>
+   <br>
+  <ion-card-content>
+    <ion-slides #myslider autoplay="1000" loop="true" speed="5000" pager="true" (ionSlidesDidLoad)="slideChanged(myslider)">
+      <ion-slide>
+        <img src="assets/l.jpg">
+      </ion-slide>
+      <ion-slide>
+          <img src="assets/p.jpg">
+      </ion-slide>
+      <ion-slide>
+          <img src="assets/mar.jpg">
+    </ion-slide>
+    <ion-slide>
+        <img src="assets/lol.jpg">
+  </ion-slide>
+         
+    </ion-slides>
+  <ion-item><div id="world">Changing your movie world experience 
+      through technology</div>
+  
+  </ion-item>
+  
+  
+  </ion-card-content>
+  </ion-card>
+  
+<div class="image">
+ <h1>Top Movies </h1>
+ <img class="a" src="assets/k.jpg">
+  <img  class="a" src="assets/bad.jpg">
+  <img class="a" src="assets/gully.jpg">
+  <img class="a" src="assets/c.jpg">
+  <img  class="a" src="assets/bell.jpg">
+  <img class="a" src="assets/j.jpg">
+</div>
+
+  </ion-content>
+  <ion-toolbar>
+    <div class="foot">
+      <ion-footer>
+    
+           <div class="footer">
+                     
+                <ion-label><ion-icon name="camera"></ion-icon><a routerLink="/movies">Movies </a></ion-label>
+             
+              </div>
+            
+                 <div class="footer">
+                  <ion-label> <ion-icon name="flash"></ion-icon><a routerLink="/theater">Theater</a></ion-label>
+                </div>
+          <!-- <ion-tab-button tab="tab2">
+            <ion-icon name="apps"></ion-icon>
+            <ion-label><a routerLink="/register">Sign Up</a></ion-label>
+          </ion-tab-button> -->
+      
+         
+            <div class="footer">   
+            <ion-label><ion-icon name="phone-portrait"></ion-icon><a routerLink="/login">Book  </a></ion-label>
+        
+          </div> 
+          <div class="footer">
+            <ion-label><ion-icon name="search"></ion-icon><a routerLink="/search">Search</a></ion-label>
+          
+          </div>
+             <div class="footer">
+              <ion-label> <ion-icon name="flash"></ion-icon><a routerLink="/profile">Profile</a></ion-label>
+            </div>
+          
+      
+      </ion-footer>
+    </div>
+  </ion-toolbar>
+ 

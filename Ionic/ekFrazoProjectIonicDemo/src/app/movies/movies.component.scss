@@ -1,0 +1,61 @@
+// div{
+//     width: 100%;
+// }
+span{
+    width: 10%;
+    height: 5%;
+    text-align: center;
+    font-size: 15px;
+    color:rgb(24, 1, 1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+img{
+    width:100%;
+}
+ion-content{
+    // --background:rgb(20, 138, 235);
+    --background:rgb(3, 46, 83);
+    box-shadow: 2px 2px 18px #120227;
+}
+h1{text-align: center;}
+ion-card{
+    color:red;
+    --background:powderblue;
+    box-shadow: 2px 2px 18px #120227;
+    
+}
+.fl{
+   
+    margin-left: 280px;
+}
+#logout{
+    float: right;
+    font-size: 18px;
+    color:red;
+}
+ion-card-header{
+    // text-align: right;
+    color: black;
+    font-size: 12px;
+}
+ion-card-title{
+    // text-align: right;
+    font-size: 15px;
+    font-weight: 500;
+    color:red;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+ion-button{
+    float:right;
+}
+ion-toolbar{
+    --background:rgb(3, 46, 83);
+    font-size: 30px;
+    font-weight: 900;
+    color:red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+ion-header{
+    --background:rgb(20, 138, 235);
+}

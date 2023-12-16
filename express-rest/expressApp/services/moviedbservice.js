@@ -2,8 +2,9 @@ var mysql      = require('mysql');
 var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password : '123456',
-    port : 3307, //port mysql
+    password : 'root',
+    // password : '123456',
+    port : 3306, //port mysql
     database:'moviedb',
     connectionLimit: 10,
     supportBigNumbers: true

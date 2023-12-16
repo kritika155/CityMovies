@@ -1,0 +1,43 @@
+
+
+<ion-content>
+<ion-card>
+    
+  <ion-card-header>
+     LOGIN 
+  </ion-card-header>
+  <ion-card-content>
+<ion-list no-lines>
+<ion-item>
+
+<ion-label floating><ion-icon name="person"></ion-icon></ion-label>
+<ion-input type="text" placeholder="Email" [(ngModel)]="customer.email"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-icon name="key"></ion-icon>
+<ion-input type="password" placeholder="Password" [(ngModel)]="customer.password"></ion-input>
+</ion-item>
+<ion-item>
+   <ion-label style="color:red;font-size: 23px;">Your OTP:{{OTP}}</ion-label>
+        </ion-item>
+  <ion-item>
+      <ion-input type="text" [(ngModel)]="verifyOTP" name="verifyOTP" placeholder="Type your OTP"></ion-input>
+    </ion-item>
+<!-- <button ion-button color="primary">Login</button> -->
+
+<ion-button class="face" color="primary" expand="block" (click)="doLogin(customer)">LOGIN</ion-button>
+</ion-list>
+<ion-label class="message">{{message}}</ion-label><br>
+<ion-label class="message">{{message2}}</ion-label>
+
+  </ion-card-content>
+  <p>OR</p><br><br>
+<ion-button class="face" color="primary" expand="block"  href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+<ion-button class="face" color="primary"expand="block"  href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Ftab%3Dwm&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession&TL=AHnYQLx_iFJ5bl-KdI6sN0sNg7Qg8TxZ16B7O61awn-HPLamDHPTI7gCG3s9rCKUXQeLWpYfWC1MRKtS3dH5NsBB7gPnUElcw1cbDP5SxzBCnWc_A70irLQ"><ion-icon name="logo-googleplus"></ion-icon></ion-button>
+
+ 
+</ion-card>
+<a id="forgot" routerLink="/forget">Forgot Your Password?</a><br>
+  <a  id="new"routerLink="/register">New User?</a>
+
+</ion-content>
