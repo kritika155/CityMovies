@@ -133,19 +133,17 @@
       id="confirm"
       >Confirm</ion-button
     > -->
+
     <ion-button color="primary" id="present-alert" name="booking"
-      >confirm</ion-button
+      >Book Now</ion-button
     >
     <ion-alert
       trigger="present-alert"
-      header="Alert!"
+      header="Please confirm your booking!"
       [buttons]="alertButtons"
       (didDismiss)="setResult($event)"
     ></ion-alert>
   </ion-card>
-  <ion-button color="primary" (click)="addBookings()" name="booking" id="book"
-    >Book</ion-button
-  >
 </ion-content>
 <!-- booking={customer_id:'',tickets:'',movie_id:'',movie_name:'',movie_time:'',theatre:'',screen:'',city:'',movie_date:'',date:'',amount:'',ticket_price:''}; -->
 <!-- <ion-input type="text" [(ngModel)]="booking.ticket_price"></ion-input> -->
